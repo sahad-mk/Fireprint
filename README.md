@@ -16,7 +16,8 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
           • Just run the script with python3
   
 ## Usage
-             python3 fireprint.py -a|-i|-p <filename/firebase db name> [-o filename]
+          ➢ python3 fireprint.py -a|-i|-p <filename/firebase db name> [-o filename]
+          ➢ python3 fireprint.py -h for help
  
    Examples:
                                                                                                                                              
