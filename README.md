@@ -20,6 +20,7 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
   
 ## Usage
           ➢ python3 fireprint.py -a|-i|-p <filename/firebase db name> [-o filename]
+          
           ➢ python3 fireprint.py -h for help
  
    Examples:
@@ -33,15 +34,21 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
              if '-o' option is not specified by the user, Default file name will be as of the input file.
   
 ## Screenshots
+
  ➊ Scanning Android(.apk) apps
+ 
              
   <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_android.png >
+  
 
  ➋ Scanning iOS(.ipa) apps 
+ 
            
    <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_iOS.png >
+   
 
  ➌ Scanning firebase db name
+ 
             
   <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_dbname.png >
 
