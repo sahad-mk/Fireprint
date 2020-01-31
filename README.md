@@ -11,6 +11,7 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
            4. Java runtime
            
 ## Installation
-   • clone the fireprint repo https://github.com/sahad-mk/Fireprint
-   • Just run the script with python3
+    • clone the fireprint repo https://github.com/sahad-mk/Fireprint
+    
+    • Just run the script with python3
          
