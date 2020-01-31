@@ -18,11 +18,12 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
 ## Usage
  
    Examples:
-                                                                                                                                   python3 fireprint.py -a test.apk  
+                                                                                                                                             
+              • python3 fireprint.py -a test.apk 
+              
+              • python3 fireprint.py -i tets.ipa or
                                                          
-              python3 fireprint.py -i tets.ipa or
-                                                         
-              python3 fireprint.py -p tets_db 
+              • python3 fireprint.py -p tets_db 
                                                          
               if '-o' option is not specified by the user, Default file name will be as of the input file.
 
