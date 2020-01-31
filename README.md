@@ -27,5 +27,7 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
            • python3 fireprint.py -p tets_db 
                                                          
              if '-o' option is not specified by the user, Default file name will be as of the input file.
+  
+## Screenshots
 
          
