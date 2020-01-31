@@ -29,5 +29,9 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
              if '-o' option is not specified by the user, Default file name will be as of the input file.
   
 ## Screenshots
+           ➊ Scanning Android(.apk) apps
 
-         
+           ➋ Scanning iOS(.ipa) apps 
+           
+           ➌ Scanning firebase db name
+           
