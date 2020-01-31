@@ -8,24 +8,24 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
            1. pip3 install json2html
            2. apktool.jar (/tools directory)
            3. grep and awk
-           4. Java runtime
+           
            
 ## Installation
-    • clone the fireprint repo https://github.com/sahad-mk/Fireprint
-    • Make the script has executable permission
-    • Just run the script with python3
+          • clone the fireprint repo https://github.com/sahad-mk/Fireprint
+          • Make the script has executable permission
+          • Just run the script with python3
   
 ## Usage
-              python3 fireprint.py -a|-i|-p <filename/firebase db name> [-o filename]
+             python3 fireprint.py -a|-i|-p <filename/firebase db name> [-o filename]
  
    Examples:
                                                                                                                                              
-              • python3 fireprint.py -a test.apk 
+           • python3 fireprint.py -a test.apk 
               
-              • python3 fireprint.py -i tets.ipa or
+           • python3 fireprint.py -i tets.ipa or
                                                          
-              • python3 fireprint.py -p tets_db 
+           • python3 fireprint.py -p tets_db 
                                                          
-              if '-o' option is not specified by the user, Default file name will be as of the input file.
+             if '-o' option is not specified by the user, Default file name will be as of the input file.
 
          
