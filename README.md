@@ -41,17 +41,17 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
  ➊ Scanning Android(.apk) apps
  
              
-  <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_apk >
+  <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_apk.png>
   
 
  ➋ Scanning iOS(.ipa) apps 
  
            
-   <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_ipa >
+   <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_ipa.png>
    
 
  ➌ Scanning firebase db name
  
             
-  <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_dbname.png >
+  <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/scan_dbname.png>
 
