@@ -1,7 +1,7 @@
 <p align="center"> <img src="https://github.com/sahad-mk/Fireprint/blob/master/screenshots/fireprint_banner.png" height="50%" width="75%"></p>
 <p align="center"><b><i> Fireprint - Firebase Scanner For Android/iOS Application </i> </b> </p>
 
-## Fireprint
+## Fireprint v1.0
 
 [![Fireprint](https://img.shields.io/badge/version-1.0-success)] [![python](https://img.shields.io/badge/Python-v3.x.x-important)] [![Tested](https://img.shields.io/badge/Tested%20On-Ubuntu%2018.04-green)] [![Linkedin](https://img.shields.io/badge/Linkedin-Sahad-blue)](https://www.linkedin.com/in/sahadmk)
 
