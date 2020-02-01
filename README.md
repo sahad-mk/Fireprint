@@ -5,7 +5,6 @@
 
 [![Fireprint](https://img.shields.io/badge/version-1.0-success)][![python](https://img.shields.io/badge/Python-v3.x.x-important)][![Linkedin](https://img.shields.io/badge/Linkedin-Sahad-blue)](https://www.linkedin.com/in/sahadmk)
 
-## Introduction
 Fireprint is a python based tool for finding misconfigured Firebase databases used in Android or iOS applications. Just drag and drop your apk/ipa files to this script and find if there is any misconfigured Firebase database is exist.
 
 ## Prerequisites
