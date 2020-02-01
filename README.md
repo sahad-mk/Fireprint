@@ -5,7 +5,7 @@
 [![Build Status](https://api.travis-ci.org/sqlmapproject/sqlmap.svg?branch=master)](https://travis-ci.org/sqlmapproject/sqlmap)[![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) 
  [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://raw.githubusercontent.com/sqlmapproject/sqlmap/master/LICENSE) [![PyPI version](https://badge.fury.io/py/sqlmap.svg)](https://badge.fury.io/py/sqlmap) [![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/sqlmapproject/sqlmap.svg?colorB=ff69b4)](https://github.com/sqlmapproject/sqlmap/issues?q=is%3Aissue+is%3Aclosed)[![Twitter](https://img.shields.io/badge/twitter-@sqlmap-blue.svg)](https://twitter.com/sqlmap)
 
-[![Fireprint](https://img.shields.io/badge/version-1.0-success)] [![Python](https://img.shields.io/badge/Python-3.x.x-important)]
+[![Fireprint](https://img.shields.io/badge/version-1.0-success)][![python](https://img.shields.io/badge/Python-3.x.x-important)][![Linkedin](https://img.shields.io/badge/Linkedin-Sahad-blue)](https://www.linkedin.com/in/sahadmk/)
 
 ## Introduction
 Fireprint is a python based tool for finding misconfigured Firebase databases used in Android or iOS applications. Just drag and drop your apk/ipa files to this script and find if there is any misconfigured Firebase database is exist.
