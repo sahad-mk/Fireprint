@@ -2,11 +2,11 @@
 <p align="center"><b><i> Fireprint - Firebase Scanner For Android/iOS Application </i> </b> </p>
 
 ## Fireprint v1.0
-[![Build Status](https://api.travis-ci.org/sqlmapproject/sqlmap.svg?branch=master)](https://travis-ci.org/sqlmapproject/sqlmap)
+[![Build Status](https://api.travis-ci.org/sqlmapproject/sqlmap.svg?branch=master)
  [![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) 
  [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://raw.githubusercontent.com/sqlmapproject/sqlmap/master/LICENSE)
 
-[![Fireprint](https://img.shields.io/badge/version-1.0-success)]     [![python](https://img.shields.io/badge/Python-v3.x.x-important)]   [![Tested](https://img.shields.io/badge/Tested%20On-Ubuntu%2018.04-green)]  [![Support](https://img.shields.io/badge/Supported%20Files-Android%20apk%20/%20iOS%20ipa-blueviolet)] [![Linkedin](https://img.shields.io/badge/Linkedin-/Sahadmk-blue)](https://www.linkedin.com/in/sahadmk)
+[![Fireprint](https://img.shields.io/badge/version-1.0-success)   [![python](https://img.shields.io/badge/Python-v3.x.x-important)   [![Tested](https://img.shields.io/badge/Tested%20On-Ubuntu%2018.04-green)  [![Support](https://img.shields.io/badge/Supported%20Files-Android%20apk%20/%20iOS%20ipa-blueviolet) [![Linkedin](https://img.shields.io/badge/Linkedin-/Sahadmk-blue)](https://www.linkedin.com/in/sahadmk)
 
 Fireprint is a python based tool for finding misconfigured Firebase databases used in Android or iOS applications. Just drag and drop your apk/ipa files to this script and find if there is any misconfigured Firebase database is exist.
 
