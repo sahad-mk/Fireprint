@@ -53,5 +53,5 @@ Fireprint is a python based tool for finding misconfigured Firebase databases us
  ➌ Scanning firebase db name
  
             
-  <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/direct_dbname.png>
+  <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/direct_scan.png>
 
