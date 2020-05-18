@@ -4,12 +4,13 @@ import urllib.error
 import subprocess
 import os
 import time
+from _datetime import datetime
 import errno
 import re
 from zipfile import ZipFile
 import argparse
 import json
-from json2html import *
+import sys
 
 
 
@@ -17,9 +18,10 @@ from json2html import *
 
 # Check the given firebase db is misconfigure or not
 def isVulnfb(fbdb_name):
-
+ today = datetime.now()
  global result
- new_endp = "https://" + str(fbdb_name) +".firebaseio.com" + "/.json"
+ new_endp = "https://" + str(fbdb_name) +".firebaseio.com" + "/.json/?shallow=true&format=exports"
+ res_endp = "https://" + str(fbdb_name) +".firebaseio.com"
  #print("\n Scanning for--->", new_endp)
  try:
 
@@ -27,12 +29,12 @@ def isVulnfb(fbdb_name):
 
   print("\n \t \033[37m Firebase Status >\033[0m Firebase Db \033[31m %s\033[0m \033[0;37;41mfound and vulnerable!\033[0m \n" %fbdb_name)
   print(" \t \033[37m Data retrieving\033[0m(\033[34;1m%s\033[0m) > \n" %fbdb_name )
-
   data_ex = f.read()
-  data_fin =  str(data_ex.decode('utf-8').rstrip())
+  data_fin = str(data_ex.decode('utf-8').rstrip())
   data_print = json.loads(data_fin)
   data_json=json.dumps(data_print,indent=5)
   print(" ---------------------------------------------------------------------------------------------------- \n")
+  print("Root node found: \n")
   print(data_json, "\n")
   print(" ----------------------------------------------------------------------------------------------------")
   print("\n \t \033[37m Data Retrieval(\033[36;1m%s\033[0m) > \033[0m\033[31;1m[*] Done \033[0m \n" % fbdb_name)
@@ -47,17 +49,33 @@ def isVulnfb(fbdb_name):
   except OSError as error_no:
    if errno.EEXIST:
     print("\n \t \033[37m Output Directory > \033[0m\033[36;1m%s\033[0m already exist! \n" % output_dir)
-#Saving result into json file
-  with open('./result/'+result+'.json','w') as json_file:
-    json.dump(data_print, json_file)
-  #saving result into txt file
+
+#saving result into txt file
   with open('./result/'+result+'.txt','w') as txt:
-   txt.writelines(data_fin)
+   txt.writelines('\n'+__headertxt__+'\n')
+   txt.writelines('\n   \t \t                  Fireprint Scan Report \n')
+   txt.writelines('\n   \t \t--------------------------------------------------------------------------- \n')
+   txt.writelines('\n \t \t Firebase db endpoint  : '+res_endp+'\n')
+   txt.writelines('\n \t \t Firebase Project name : '+fbdb_name+'\n')
+   txt.writelines('\n \t \t Nodes found           : '+data_fin+'\n')
+   txt.writelines('\n \t \t Status                :  Vulnerable! \n')
+   txt.writelines('\n \t \t Scanning completed on : '+str(today.strftime("%Y-%m-%d %H:%M")))
+
+
 #saving result to html file
   with open('./result/'+result+'.html','w') as ht:
-   tst = json2html.convert(json=data_print)
-   ht.writelines(tst)
-   print("\n \t \033[37m Output Files(\033[36;1m/%s\033[0m) >\033[0m\033[36;1m %s.html %s.json %s.txt \033[0mare Generated! \n" % (output_dir,result,result,result))
+   ht.writelines('<body style="background-color:lavender;">')
+   ht.writelines('<h1 style="font-family:verdana;text-align:center;color:Teal">'+'<u>Fireprint Scan Report</u>'+'</h1>')
+   ht.writelines('<div style="color:Red;font-family:courier;font-size:150%"><pre style="align:center"><b>'+__headertxt__+'</b></pre></div>')
+   ht.writelines('<p style="background-color:darkcyan;color:white;font-family:courier;font-size:125%"> Firebase db endpoint : <b>'+res_endp+'</b></p>')
+   ht.writelines('<p style="background-color:darkcyan;color:white;font-family:courier;font-size:125%">Firebase Project name : <b> '+fbdb_name+'</b></p>')
+   ht.writelines('<p style="background-color:darkcyan;color:white;font-family:courier;font-size:125%">Nodes found  : <b>'+data_json+'</b></p>')
+   ht.writelines('<p style="background-color:darkcyan;color:white;font-family:courier;font-size:125%">Status : <b>Vulnerable!</b> </p>')
+   ht.writelines('<p style="text-align:center">Scanning completed on: '+str(today.strftime("%Y-%m-%d %H:%M"))+'</p>')
+   ht.writelines('<br>')
+   ht.writelines('<p style="text-align:center"><b>©FirePrint 2020 - 2021</b></p> </body>')
+
+   print("\n \t \033[37m Output Files(\033[36;1m/%s\033[0m) >\033[0m\033[36;1m %s.html  %s.txt \033[0mare Generated! \n" % (output_dir,result,result))
  except urllib.error.HTTPError as e:           #except urllib.error.HTTPError as e:
      #print(e.code)
      st_code=e.code
@@ -158,7 +176,7 @@ def decapk(apk_file):
   print('\t \033[37;1m apktool not found, Please copy apktool.jar file to the directory /tools  \033[0m \n')
   sys.exit()
 #Decompiling apk file and searching for firebase db
- dec_cmd = ("java -jar ./tools/apktool.jar  d -f "+file_org+ " -o ./decomp/"+file_name + " > /dev/null")
+ dec_cmd = ("java -jar ./tools/apktool.jar  d -f "+file_org + " -o ./decomp/"+file_name + " > /dev/null")
 # print("entered command:"+dec_cmd)
  os.system(dec_cmd)
  print("\n \t \033[37m APK Decompilation > \033[0m\033[31;1m[*] Done \033[0m \n")
@@ -187,14 +205,25 @@ def deman(project_name):
 
 
 #banner
+__headertxt__ = '''
+                                  \t \t          ______  _             ______        _         _   
+                                  \t \t          |  ___|(_)            | ___ \      (_)       | |  
+                                  \t \t          | |_    _  _ __   ___ | |_/ / _ __  _  _ __  | |_ 
+                                  \t \t          |  _|  | || '__| / _ \|  __/ | '__|| || '_ \ | __|
+                                  \t \t          | |    | || |   |  __/| |    | |   | || | | || |_ 
+                                  \t \t          \_|    |_||_|    \___|\_|    |_|   |_||_| |_| \__|
+                                                          \t            [Firebase Scanner For Andoid/iOS]
+
+                                       '''
+
 
 __header__ = '''
-\t \t\033[31;1m ______  _             ______        _         _   \033[0m
-\t \t\033[31;1m|  ___|(_)            | ___ \      (_)       | |  \033[0m
-\t \t\033[31;1m| |_    _  _ __   ___ | |_/ / _ __  _  _ __  | |_ \033[0m
-\t \t\033[31;1m|  _|  | || '__| / _ \|  __/ | '__|| || '_ \ | __|\033[0m
-\t \t\033[31;1m| |    | || |   |  __/| |    | |   | || | | || |_ \033[0m
-\t \t\033[31;1m\_|    |_||_|    \___|\_|    |_|   |_||_| |_| \__|\033[0m \033[32;1mv1.0\033[0m
+\t \t\033[38;5;196m______  _             ______        _         _   \033[0m
+\t \t\033[38;5;196m|  ___|(_)            | ___ \      (_)       | |  \033[0m
+\t \t\033[38;5;196m| |_    _  _ __   ___ | |_/ / _ __  _  _ __  | |_ \033[0m
+\t \t\033[38;5;196m|  _|  | || '__| / _ \|  __/ | '__|| || '_ \ | __|\033[0m
+\t \t\033[38;5;196m| |    | || |   |  __/| |    | |   | || | | || |_ \033[0m
+\t \t\033[38;5;196m\_|    |_||_|    \___|\_|    |_|   |_||_| |_| \__|\033[0m \033[32;1mv1.1\033[0m
                   \t \033[37;1m [Firebase Scanner For Andoid/iOS]\033[0m
                       
                                        \t\t\t\033[34;1mCoded\033[0m\033[1;37;41m©Sahad.Mk\033[0m
