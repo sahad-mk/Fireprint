@@ -8,11 +8,10 @@
 FirePrint is a python based tool for finding misconfigured Firebase databases used in Android or iOS applications. Just drag and drop your apk/ipa files to this script and find if there is any misconfigured Firebase database is exist.
 
 ## Prerequisites
-          1. pip3 install json2html
+          1. apktool.jar (/tools directory)
           
-          2. apktool.jar (/tools directory)
+          2. grep and awk
           
-          3. grep and awk
            
            
 ## Installation
