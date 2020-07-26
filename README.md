@@ -3,18 +3,18 @@
 
 ## Fireprint v1.1
 
-![Fireprint](https://img.shields.io/badge/version-1.1-success)   ![python](https://img.shields.io/badge/Python-v3.x.x-important)   ![Tested](https://img.shields.io/badge/Tested%20On-Ubuntu%2018.04-green)  ![Support](https://img.shields.io/badge/Supported%20Files-Android%20apk%20/%20iOS%20ipa-blueviolet) [![Linkedin](https://img.shields.io/badge/Linkedin-/Sahadmk-blue)](https://www.linkedin.com/in/sahadmk)
+![Fireprint](https://img.shields.io/badge/version-2.0-success)   ![python](https://img.shields.io/badge/Python-v3.x.x-important)   ![Tested](https://img.shields.io/badge/Tested%20On-Ubuntu%2018.04-green)  ![Support](https://img.shields.io/badge/Supported%20Files-Android%20apk%20/%20iOS%20ipa-blueviolet) [![Linkedin](https://img.shields.io/badge/Linkedin-/Sahadmk-blue)](https://www.linkedin.com/in/sahadmk)
 
 FirePrint is a python based tool for finding misconfigured Firebase databases used in Android or iOS applications. Just drag and drop your apk/ipa files to this script and find if there is any misconfigured Firebase database is exist.
 
 ## Prerequisites
+
           1. apktool.jar (/tools directory)
           
-          2. grep and awk
+     
           
-           
-           
 ## Installation
+         
           • clone the fireprint repo,   git clone https://github.com/sahad-mk/Fireprint
           
           • Give executable permission, chmod +x fireprint.py 
@@ -33,7 +33,6 @@ FirePrint is a python based tool for finding misconfigured Firebase databases us
                                                          
           • python3 fireprint.py -p tets_db 
                                                          
-             if '-o' option is not specified by the user, Default file name will be as of the input file.
   
 ## Screenshots
 
