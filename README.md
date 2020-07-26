@@ -12,7 +12,6 @@ FirePrint is a python based tool for finding misconfigured Firebase databases us
           1. apktool.jar (/tools directory)
           
      
-          
 ## Installation
          
           • clone the fireprint repo,   git clone https://github.com/sahad-mk/Fireprint
