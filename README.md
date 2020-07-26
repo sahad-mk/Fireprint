@@ -1,4 +1,4 @@
-<p align="center"> <img src="https://github.com/sahad-mk/Fireprint/blob/master/screenshots/banner.png" height="50%" width="75%"></p>
+<p align="center"> <img src="https://github.com/sahad-mk/Fireprint/blob/master/screenshots/banner_2.0.png" height="50%" width="75%"></p>
 <p align="center"><b><i> Fireprint - Firebase Scanner For Android/iOS Application </i> </b> </p>
 
 ## Fireprint v2.0
@@ -39,7 +39,7 @@ FirePrint is a python based tool for finding misconfigured Firebase databases us
  ➊ Scanning Android(.apk) apps
  
              
-   <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/android_scan.png>
+   <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/apk_scan.png>
   
 
  ➋ Scanning iOS(.ipa) apps 
@@ -59,10 +59,6 @@ FirePrint is a python based tool for finding misconfigured Firebase databases us
   
   <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/html_report.png>
   
-  
- ➎ TXT Report
  
- 
- <img src=https://github.com/sahad-mk/Fireprint/blob/master/screenshots/text_report.png>
   
  
