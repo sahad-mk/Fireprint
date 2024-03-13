@@ -5,7 +5,7 @@
 
 ![Fireprint](https://img.shields.io/badge/version-2.0-success)   ![python](https://img.shields.io/badge/Python-v3.x.x-important)   ![Tested](https://img.shields.io/badge/Tested%20On-Ubuntu%2018.04-green)  ![Support](https://img.shields.io/badge/Supported%20Files-Android%20apk%20/%20iOS%20ipa-blueviolet) [![Linkedin](https://img.shields.io/badge/Linkedin-/Sahadmk-blue)](https://www.linkedin.com/in/sahadmk)
 
-FirePrint is a python based tool for finding misconfigured Firebase databases used in Android or iOS applications. Just drag and drop your apk/ipa files to this script and find if there is any misconfigured Firebase database is exist.
+FirePrint is a Python-based tool for identifying misconfigured Firebase databases used in Android or iOS applications. Simply drag and drop your APK/IPA files onto this script to check if any misconfigured Firebase databases exist.
 
 ## Prerequisites
 
