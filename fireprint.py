@@ -8,6 +8,7 @@ import re
 from zipfile import ZipFile
 import argparse
 import sys
+import platform
 
 
 # Function for fetching firebase endpoints
@@ -164,7 +165,7 @@ def isVulnfb(fbdb_name):
    print("An timeout error occurred:", errt)
  except requests.exceptions.RequestException as err:
    print("An request Error occurred:", err)
-
+ 
 
 
 #passing ipa file and find firebase project name
@@ -218,8 +219,6 @@ def decapk(apk_file):
 
  apk_file1 = apk_file                #input("input apk filename: )
  file_org = apk_file1.replace("'","")
-
-
  path_file = os.path.split(file_org)
  fle_name,file_ext = os.path.splitext(file_org)
  file_name = path_file[1]
@@ -243,8 +242,16 @@ def decapk(apk_file):
   print('\t \033[37;1m apktool not found, Please copy apktool.jar file to the directory /tools  \033[0m \n')
   sys.exit()
 #Decompiling apk file and searching for firebase db
- dec_cmd = ("java -jar ./tools/apktool.jar  d -f "+file_org + " -o ./decomp/"+file_name + " > /dev/null")
-# print("entered command:"+dec_cmd)
+
+ osid = platform.system()
+ #print("current os:",osid)
+#Windows
+ if osid == "Windows":
+  dec_cmd = ("java -jar ./tools/apktool.jar  d -f "+file_org + " -o ./decomp/"+file_name + " >nul 2>&1 ")
+#Linux
+ else:
+  dec_cmd = ("java -jar ./tools/apktool.jar  d -f "+file_org + " -o ./decomp/"+file_name + " > /dev/null")
+ 
  os.system(dec_cmd)
  print("\t \033[37m APK Decompilation > \033[0m\033[31;1m[*] Done \033[0m \n")
  dir_name = "./decomp/"+file_name
